@@ -1,0 +1,65 @@
+<view class="container">
+  <!-- 相关信息 -->
+  <view>
+    <view class="content">
+      <view>
+        <label>车牌号<i>*</i></label>
+        <input placeholder="请输入车牌号" placeholder-class="inputClass"></input>
+      </view>
+      <view>
+        <label>车辆颜色<i>*</i></label>
+        <input placeholder="请确认车辆颜色" placeholder-class="inputClass"></input>
+      </view>
+      <view bindtap="goDriving">
+        <label>行驶证照片<i>*</i></label>
+        <view wx:if="{{tempFilePaths.length==0}}">
+          <!-- <image src="../../../images/sfz_z.png" class="card"></image>
+          <image src="../../../images/sfz_f.png" class="card"></image> -->
+          <image src="{{item}}" class="card" wx:for="{{icon}}" wx:key="index"></image>
+          <image class="detail" src="../../../images/detail.png"/>
+        </view>
+        <view wx:else>
+          <image src="{{item}}" class="card"  wx:for="{{tempFilePaths}}" wx:key="index"></image>
+          <image class="detail" src="../../../images/detail.png"/>
+        </view>
+      </view>
+      <view>
+        <label>核定载重<i>*</i></label>
+         <input placeholder="请输入车辆核定载重" placeholder-class="inputClass"></input>
+      </view>
+      <view>
+          <label>车长<i>*</i></label>
+           <input placeholder="输入车长" placeholder-class="inputClass"></input>
+      </view>
+      <view>
+        <label>车型<i>*</i></label>
+        <input placeholder="请输入车型" placeholder-class="inputClass"></input>
+      </view>
+      <view class="optional" bindtap="transportation">
+        <view>
+          道路运输证照片
+        <label>(选填)</label>
+        </view>
+        <image class="detail" src="../../../images/detail.png"/>
+      </view>
+      <view class="optional" bindtap="groupPhoto">
+        <view>
+          人车合影照片
+        <label>(选填)</label>
+        </view>
+        <image class="detail" src="../../../images/detail.png"/>
+      </view>
+      <view class="optional" bindtap="insurance">
+        <view>
+         保险卡照片
+        <label>(选填)</label>
+        </view>
+        <image class="detail" src="../../../images/detail.png"/>
+      </view>
+    </view>
+  </view>
+  <!-- 按钮 -->
+  <view class="bottom">
+    <button class="btnBottom" bindtap="save">保存</button>
+  </view>
+</view>

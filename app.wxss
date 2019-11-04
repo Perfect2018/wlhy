@@ -1,0 +1,33 @@
+/**app.wxss**/
+/* .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}  */
+.container{
+  height: 100%
+}
+page{
+  height: 100%;
+  background: #efefef;
+}
+
+.btnBottom{
+  width: 686rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+  background: #15af7d;
+  color: #fefefe;
+  font-size: 36rpx;
+  margin-bottom: 38rpx;
+  /* position: fixed;
+  bottom: 38rpx; */
+}
+
+i{
+  color: #15af7d
+}

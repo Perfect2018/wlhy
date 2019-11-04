@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap
+}
+
+.attention {
+  width: 686rpx;
+  height: 286rpx;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 20rpx;
+  padding: 30rpx;
+  box-sizing: border-box;
+  margin-top: 30rpx;
+}
+.attention text:first-child{
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #15af7d;
+}
+.attention>view{
+  font-size: 30rpx;
+  color: #333333;
+  margin-top: 9rpx;
+  margin-bottom: 9rpx;
+  font-weight: 500
+}
+view.first{
+  margin-top: 27rpx;
+}
+.photo{
+  height: 582rpx;
+  width: 494rpx;
+}
+.photo>image{
+  width: 100%;
+  height: 100%
+}

@@ -1,0 +1,38 @@
+<view class="container">
+  <!-- 相关信息 -->
+  <view>
+    <view class="content">
+      <view>
+        <label>开户姓名<i>*</i></label>
+        <input placeholder="请输入开户姓名" placeholder-class="inputClass" type="text" bindinput="getName"></input>
+      </view>
+      <view>
+        <label>银行卡号<i>*</i></label>
+        <input placeholder="请输入银行卡号" placeholder-class="inputClass" type="number" bindinput="getNum"></input>
+      </view>
+      <view>
+        <label>开户银行<i>*</i></label>
+        <input placeholder="请输入开户银行" placeholder-class="inputClass" type="text" bindinput="getBank"></input>
+      </view>
+      <view>
+        <label>身份证号<i>*</i></label>
+         <input placeholder="请输入身份证号" placeholder-class="inputClass" type="idcard" bindinput="getCard" maxlength="18"></input>
+      </view>
+      <view>
+          <label>联系电话<i>*</i></label>
+           <input placeholder="请输入联系电话" placeholder-class="inputClass" type="number" maxlength="11" bindinput="getPhone"></input>
+      </view>
+    </view>
+  </view>
+  <!-- 要求 -->
+  <view class="require">
+    <view>
+      <view>要求:</view>
+      <view>开户姓名、银行卡必须是同一人，当用户姓名和平台其他司机重名时，需要填写身份证号码，确保银行卡信息的准确性！</view>
+    </view>
+  </view>
+  <!-- 按钮 -->
+  <view class="bottom">
+    <button class="btnBottom" bindtap="save">保存</button>
+  </view>
+</view>

@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/home/home",
+    "pages/billingInfo/billingInfo",
+    "pages/searchCard/searchCard",
+    "pages/certification/certification",
+    "pages/certification/identity/identity",
+    "pages/certification/driving/driving",
+    "pages/certification/photo/photo",
+    "pages/certification/car/car",
+    "pages/certification/bank/bank",
+    "pages/viewInfo/viewInfo",
+    "pages/signBinding/signBinding",
+    "pages/signthird/signthird",
+    "pages/signPlate/signplate",
+    "pages/accept/accept",
+    "pages/acceptcontract/acceptcontract",
+    "pages/waybillcenter/center",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/waybill/waybill",
+    "pages/viewInfo/lookbankinfo/lookbankinfo",
+    "pages/viewInfo/lookcarinfo/lookcarinfo"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于地图的效果展示"
+    }
+  },
+  "window": {
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "网络货运",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#15af7d",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/waybillcenter/center",
+        "text": "运单",
+        "iconPath": "images/yundan_1.png",
+        "selectedIconPath": "images/yundan_2.png"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "我的",
+        "iconPath": "images/wo_1.png",
+        "selectedIconPath": "images/wo_2.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

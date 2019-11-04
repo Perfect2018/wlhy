@@ -1,0 +1,186 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"nodeModules": true,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.9.0",
+	"appid": "wx192b8be8542d3686",
+	"projectname": "wlhy",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "pages/certification/ertification",
+					"pathName": "pages/certification/certification",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/certification/identity/identity",
+					"pathName": "pages/certification/identity/identity",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/certification/driving/driving",
+					"pathName": "pages/certification/driving/driving",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/certification/photo/photo",
+					"pathName": "pages/certification/photo/photo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/certification/car/car",
+					"pathName": "pages/certification/car/car",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/certification/bank/bank",
+					"pathName": "pages/certification/bank/bank",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/home",
+					"pathName": "pages/home/home",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/viewInfo/viewInfo",
+					"pathName": "pages/viewInfo/viewInfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/signBinding/signBinding",
+					"pathName": "pages/signBinding/signBinding",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/signthird/signthird",
+					"pathName": "pages/signthird/signthird",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/signPlate/signplate",
+					"pathName": "pages/signPlate/signplate",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/accept/accept",
+					"pathName": "pages/accept/accept",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/acceptcontract/acceptcontract",
+					"pathName": "pages/acceptcontract/acceptcontract",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/waybillcenter/center",
+					"pathName": "pages/waybillcenter/center",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/billingInfo/billingInfo",
+					"pathName": "pages/billingInfo/billingInfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/viewInfo/lookbankinfo/lookbankinfo",
+					"pathName": "pages/viewInfo/lookbankinfo/lookbankinfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/viewInfo/lookcarinfo/lookcarinfo",
+					"pathName": "pages/viewInfo/lookcarinfo/lookcarinfo",
+					"scene": null
+				}
+			]
+		}
+	}
+}

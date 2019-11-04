@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-icon":"../../miniprogram_npm/vant-weapp/icon/index",
+    "van-button":"../../miniprogram_npm/vant-weapp/button/index"
+  },
+  "navigationBarTitleText":"账单信息",
+  "navigationBarBackgroundColor":"#ffffff",
+  "navigationBarTextStyle":"black"
+}

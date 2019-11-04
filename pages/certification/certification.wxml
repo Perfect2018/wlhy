@@ -1,0 +1,78 @@
+<scroll-view class="container" scroll-y="true" style="height: 100%;">
+<!-- 提示信息 -->
+  <view class="tip" wx:if='{{isShow}}'>
+    请注意，带*号为必填项哦！
+    <!-- <button> -->
+      <van-icon name="close" bindtap="close"/>
+    <!-- </button> -->
+  </view>
+  <!-- 相关信息 -->
+  <view>
+    <view class="content">
+      <view>
+        <label>身份证号<i>*</i></label>
+        <input placeholder="请输入身份证号" placeholder-class="inputClass"></input>
+      </view>
+      <view>
+        <label>司机姓名<i>*</i></label>
+        <input placeholder="请输入姓名" placeholder-class="inputClass"></input>
+      </view>
+      <view bindtap="goIdentity">
+        <label>身份证照片<i>*</i></label>
+        <view>
+          <image src="../../images/sfz_z.png" class="card"></image>
+          <image src="../../images/sfz_f.png" class="card"></image>
+          <image class="detail" src="../../images/detail.png"/>
+        </view>
+      </view>
+      <view bindtap="goDriving">
+        <label>驾驶证照片<i>*</i></label>
+        <view class="driving">
+          <image src="../../images/jsz_z.png" class="card"></image>
+          <image class="detail" src="../../images/detail.png"/>
+        </view>
+      </view>
+      <view class="way">
+        <view>
+          <label>实名认证方式<i>*</i></label>
+          <view>{{labelText}}</view>
+        </view>
+        <view>
+          <button class="btn {{active1}}" bindtap="phoneNum">本人实名手机号</button>
+          <button class="btn {{active2}}" bindtap="groupPhoto">人证合照</button>
+        </view>
+      </view>
+      <!-- 实名认证手机号 -->
+      <view wx:if='{{type}}'>
+        <label>实名认证手机号<i>*</i></label>
+        <input placeholder="请输入实名认证手机号" placeholder-class="inputClass" maxlength="11" bindblur="getPhoneNum"></input>
+      </view>
+      <!-- 人证合照 -->
+      <view wx:else bindtap="goPhoto">
+        <label>人证合照<i>*</i></label>
+        <view class="driving">
+          <image src="../../images/jsz_z.png" class="card"></image>
+          <image class="detail" src="../../images/detail.png"/>
+        </view>
+      </view>
+      <view class="optional" bindtap="addCar">
+        <view>
+          添加车辆
+        <label>(选填)</label>
+        </view>
+        <image class="detail" src="../../images/detail.png"/>
+      </view>
+      <view class="optional" bindtap="addBankCard">
+        <view>
+          添加银行卡
+        <label>(选填)</label>
+        </view>
+        <image class="detail" src="../../images/detail.png"/>
+      </view>
+    </view>
+  </view>
+  <!-- 按钮 -->
+  <view class="bottom" bindtap="commit">
+    <button class="btnBottom">提交认证</button>
+  </view>
+</scroll-view>

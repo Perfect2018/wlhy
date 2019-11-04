@@ -1,0 +1,19 @@
+var self = {
+  // 银行卡
+  cut:function(str) {
+    return str.substring(0, 4) + "**** ****" + str.substring(16);
+    // return number;
+  },
+  // 手机号
+  getphone: function (str) {
+    return str.substring(0, 3) + "**** ****" + str.substring(7);
+    // return number;
+  }
+}
+
+
+
+module.exports ={
+  cut:self.cut,
+  getphone:self.getphone,
+}

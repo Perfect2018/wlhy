@@ -1,0 +1,7 @@
+<view class="container">
+  <view class="contract">麒麟智签第三放签署协议</view>
+  <view class="bottom">
+    <radio checked="{{isDisabled}}" bindtap="agree">我已阅读第三方签署协议并同意以上条款</radio>
+    <button class="btnBottom" disabled="{{!isDisabled}}" bindtap="next">下一步</button>
+  </view>
+</view>

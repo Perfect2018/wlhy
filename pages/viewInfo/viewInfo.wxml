@@ -1,0 +1,75 @@
+<wxs module="common" src="../../utils/common.wxs"></wxs>
+<view class="container">
+  <!-- 相关信息 -->
+  <view>
+    <view class="content">
+      <view>
+        <label>身份证号:</label>
+        <text>102130200001010111</text>
+      </view>
+      <view>
+        <label>司机姓名:</label>
+        <text>唐三</text>
+      </view>
+      <view>
+        <label>身份证照片:</label>
+        <view>
+          <image src="../../images/sfz_z.png" class="card"></image>
+          <image src="../../images/sfz_f.png" class="card"></image>
+        </view>
+      </view>
+      <view>
+        <label>驾驶证照片:</label>
+        <image src="../../images/jsz_z.png"></image>
+      </view>
+      <view class="way" wx:if="{{type}}">
+        <label>实名认证方式:</label>
+        <view>
+          <text>本人实名手机号</text>
+          <image src="../../images/yirenzheng.png"></image>
+        </view>
+      </view>
+      <view class="group" wx:else>
+        <!-- 上 -->
+        <view>
+          <label>实名认证方式:</label>
+          <view>
+            人证合照认证(
+            <label>审核中</label>)
+          </view>
+        </view>
+        <!-- 下 -->
+        <view>人证合照认证需平台进行人工审核，大概1-2个工作日，请您耐心等待！</view>
+      </view>
+      <view wx:if="{{type}}">
+        <label>实名认证手机号</label>
+        <text>18888888888</text>
+      </view>
+      <view wx:else bindtap="goPhoto">
+        <label>人证合照:</label>
+        <view class="driving">
+          <image src="../../images/jsz_z.png" class="card"></image>
+          <image class="detail" src="../../images/detail.png" />
+        </view>
+      </view>
+      <view class="optional">
+        <label>车辆信息:</label>
+        <!-- <view bindtap="addCarInfo" wx:if="{{exist}}">
+          <image src="../../images/tianjia.png"></image>
+          添加
+        </view> -->
+        <view class="license" bindtap="lookcarinfo">
+          <text>京A66666</text>
+          <text>查看</text>
+        </view>
+      </view>
+      <view class="optional">
+        <label>银行卡信息:</label>
+        <view class="num" bindtap="lookbankinfo">
+          {{common.cut(num)}}
+          <label>查看</label>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

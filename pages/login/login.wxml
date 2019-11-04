@@ -1,0 +1,23 @@
+<view class="container">
+  <view class="login_icon">
+    <image src="../../images/login_icon.png"></image>
+  </view>
+  <form bindsubmit="formsubmit" class="form">
+    <view class="username">
+      <image src="../../images/user.png"></image>
+      <input placeholder="请输入用户名" placeholder-class="input" focus="true" name="username"></input>
+    </view>
+    <view class="pwd">
+      <image src="../../images/pwd.png"></image>
+      <input placeholder="请输入密码" password="true" placeholder-class="input" name="password"></input>
+    </view>
+    <view class="select">
+      <image src="{{isSelect==true?'../../images/selected.png':'../../images/select.png'}}" bindtap="select"></image>
+      <text>记住密码</text>
+    </view>
+    <view>
+       <button formType="submit">登录</button>
+    </view>
+  </form>
+  <view><text>一个让您放心的网络货运平台</text></view>
+</view>

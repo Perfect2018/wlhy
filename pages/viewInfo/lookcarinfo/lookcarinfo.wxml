@@ -1,0 +1,44 @@
+<view class="container">
+  <!-- 相关信息 -->
+  <view>
+    <view class="content">
+      <view>
+        <label>车牌号:</label>
+        <text>{{carinfo.carnum}}</text>
+      </view>
+      <view>
+        <label>车辆颜色:</label>
+        <text>{{carinfo.color}}</text>
+      </view>
+      <view>
+        <label>行驶证照片:</label>
+        <image class="detail" src="{{item}}" wx:for="{{carinfo.drivingimgs}}" wx:key="index"/>
+      </view>
+      <view>
+        <label>核定载重:</label>
+        <text>{{carinfo.weight}}</text>
+      </view>
+      <view>
+        <label>车长:</label>
+        <text>{{carinfo.length}}</text>
+      </view>
+      <view>
+        <label>车型:</label>
+        <text>{{carinfo.type}}</text>
+      </view>
+      <view class="optional">
+        <label>道路运输证照片:</label>
+        <image class="detail" src="{{item}}" wx:for="{{carinfo.wayimgs}}" wx:key="index" data-index="{{index}}" bindtap="transportation"/>
+      </view>
+      <view class="optional">
+        <label>人车合影照片:</label>
+        <image class="detail" src="{{item}}" wx:for="{{carinfo.groupphoto}}" wx:key="index" data-index="{{index}}" bindtap="groupPhoto"/>
+      </view>
+      <view class="optional">
+        <label>保险卡照片:</label>
+        <image class="detail" src="{{item}}"  wx:for="{{carinfo.insurance}}" wx:key="index" data-index="{{index}}" bindtap="insurance"/>
+      </view>
+    </view>
+  </view>
+
+</view>

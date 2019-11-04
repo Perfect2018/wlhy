@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.plate {
+  width: 687rpx;
+  height: 204rpx;
+  background: #fff;
+  box-shadow: 0px 2px 2px 0px rgba(117, 117, 117, 0.09);
+  border-radius: 20px;
+  margin-top: 30rpx;
+  padding-left: 33rpx;
+  padding-right: 33rpx;
+  box-sizing: border-box;
+}
+
+.plate>view {
+  height: 100rpx;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+text {
+  font-size: 32rpx;
+  color: #111;
+}
+
+.plate>view:first-child {
+  border-bottom: 2rpx solid #e3e3e3;
+}
+
+.plate>view:last-child {
+  border-bottom: 2rpx solid #e3e3e3;
+}
+
+.plate>view>image {
+  width: 12rpx;
+  height: 20rpx;
+}

@@ -1,0 +1,6 @@
+<view class="container">
+    <p class="text">您尚未签署无车承运人合同</p>
+    <p>暂时无法开展业务</p>
+    <button class="contract_btn" bindtap="signContract">去签合同</button>
+</view>
+  

@@ -1,0 +1,26 @@
+<!-- index.wxml -->
+<view class="container">
+  <!-- <view class="userinfo"> -->
+  <view wx:if="{{!hasUserInfo && canIUse}}" class="login">
+    <view class="logo">
+      <image src="../../images/login_pic.png" mode="aspectFit" lazy-load="true"></image>
+      <text>简单、方便、快捷！</text>
+    </view>
+    <view>
+      <button class="btn" bindgetuserinfo="getUserInfo" open-type="getUserInfo">微信登陆</button>
+    </view>
+    <view class="usermotto">
+      <text class="user-motto">{{motto}}</text>
+    </view>
+  </view>
+  <view wx:else>
+    <view class="sum">
+      <view class="sum-top">
+        <p class="com">总上报金额</p>
+        <p class="money">￥{{money}}</p>
+      </view>
+      <van-button color="#15af7d" size="large" round="true" class="btn" bindtap="submit">我要报账</van-button>
+    </view>
+  </view>
+  <!-- </view> -->
+</view>

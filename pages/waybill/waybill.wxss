@@ -1,0 +1,29 @@
+/* pages/waybill/waybill.wxss */
+.container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text{
+    margin-bottom: 9px;
+}
+
+p{
+    font-size: 15sp;
+    color: #666666;
+    letter-spacing: 2px;
+}
+
+.contract_btn{
+    width: 220px;
+    height: 50px;
+    background: #15af7d;
+    border-radius: 25px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: #fefefe;
+    margin-top: 57px;
+}

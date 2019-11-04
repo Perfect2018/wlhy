@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "verifycode": "/components/verifycode"
+  },
+  "navigationBarTitleText": "签署盘绑定"
+}

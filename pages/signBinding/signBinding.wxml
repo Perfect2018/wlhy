@@ -1,0 +1,28 @@
+<view class="container">
+  <view>
+    <view>
+      <input class="input" placeholder="请输入签署盘序列号" placeholder-class="place"></input>
+      <view>请输入您的麒麟智签签署盘序列号，绑定签署盘！</view>
+    </view>
+    <view class="bottom">
+      <button class="btnBottom" bindtap="binding">绑定</button>
+    </view>
+  </view>
+  <!-- 遮罩层 -->
+  <view class="mask" wx:if="{{isShow}}">
+    <view class="fail">
+      <view>
+        <image src="../../images/close.png" class="close" bindtap="close"></image>
+      </view>
+      <view>
+        <image src="../../images/fail.png"></image>
+        绑定失败
+      </view>
+      <view>请仔细确认序列号是否正确</view>
+      <view>
+        <button bindtap="close">重新绑定</button>
+      </view>
+    </view>
+  </view>
+  
+</view>

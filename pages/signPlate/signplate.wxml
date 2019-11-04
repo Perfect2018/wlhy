@@ -1,0 +1,12 @@
+<view class="container">
+  <view class="plate">
+    <view bindtap="goLook">
+      <text>有盘</text>
+      <image src="../../images/detail.png"></image>
+    </view>
+    <view bindtap="goApply">
+      <text>没有去申请</text>
+      <image src="../../images/detail.png"></image>
+    </view>
+  </view>
+</view>

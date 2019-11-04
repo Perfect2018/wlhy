@@ -1,0 +1,161 @@
+.container view {
+  /* width: 100%; */
+  display: flex;
+  justify-content: center;
+}
+
+.container .content {
+  margin-top: 20rpx;
+  margin-bottom: 87rpx;
+  padding-left: 34rpx;
+  padding-right: 34rpx;
+  width: 687rpx;
+  /* height: 804rpx; */
+  background: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 20rpx;
+  letter-spacing: 2rpx;
+  box-sizing: border-box;
+}
+
+.inputClass {
+  text-align: right;
+}
+
+.bottom {
+  height: 100rpx;
+}
+
+.content>view {
+  width: 100%;
+  height: 100rpx;
+  border-bottom: 2rpx solid #e3e3e3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.content>view>label {
+  font-size: 32rpx;
+  color: #111;
+}
+
+.content>view:last-child {
+  border-bottom: none;
+}
+
+.content>view>view {
+  width: 148rpx;
+  /* height: 100%; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content>view>image {
+  width: 55rpx;
+  height: 40rpx;
+}
+
+.card {
+  width: 55rpx;
+  height: 40rpx;
+}
+
+.detail {
+  width: 12rpx;
+  height: 20rpx;
+}
+
+.content>view>view.driving {
+  width: 80rpx;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.select {
+  color: #111;
+  border-color: #999;
+}
+
+.selected {
+  color: #15af7d;
+  border-color: #15af7d;
+}
+
+.content .way>view {
+  width: 46%;
+}
+
+.content .way image {
+  width: 34rpx;
+  height: 41rpx;
+}
+
+text {
+  font-size: 32rpx;
+  color: #333;
+}
+
+view.optional>view {
+  width: 100rpx;
+  font-size: 32rpx;
+  color: #15af7d;
+}
+
+view.optional>view>image {
+  width: 21rpx;
+  height: 21rpx;
+}
+
+view.optional>view.license {
+  width: 40%;
+}
+
+view.optional>view.license>text:last-child{
+  color: #15af7d
+}
+
+view.optional>view.num {
+  color: #333;
+  font-size: 32rpx;
+  width: 60%;
+}
+view.optional>view.num>label{
+   color: #15af7d
+}
+.content>view.group {
+  width: 100%;
+  height: 218rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.content>view.group>view {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.content>view.group>view:last-child {
+  font-size: 28rpx;
+  color: #999;
+}
+
+.content>view.group>view>label {
+  font-size: 32rpx;
+  color: #111;
+}
+
+.content>view.group>view>view {
+  font-size: 32rpx;
+  color: #111;
+  font-weight: 500;
+}
+
+.content>view.group>view>view>label {
+  color: #e32222;
+}

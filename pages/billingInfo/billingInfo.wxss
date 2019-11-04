@@ -1,0 +1,156 @@
+.container{
+    /* height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center; */
+    padding: 15px 16px 19px 16px;
+    box-sizing: border-box;
+}
+
+.section{
+    width: 343px;
+    height: 60px;
+    border-radius: 10px;
+    background: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 17sp;
+    color: #111111;
+    letter-spacing: 2px;
+    /* padding-left: 17px  ; */
+    /* margin-top: 15px; */
+    box-sizing: border-box;
+}
+
+.section input{
+    color: #333333;
+    font-size: 17sp;
+}
+
+.detail{
+    background: #ffffff;
+    width: 343px;
+    height: 384px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.detail p{
+    padding-left: 17px;
+    padding-right: 16px;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #e3e3e3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    font-size: 16sp;
+    color: #111111;
+}
+
+.detail .time{
+  width: 100%;
+  height: 100%;
+}
+
+picker{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+  box-sizing: border-box;
+  /* font-size: 16sp; */
+  color: #15af7d;
+  text-align: justify
+}
+
+picker span{
+  margin-right: 110rpx;
+  color: #111111
+}
+
+.detail p span i{
+    color: #15af7d;
+}
+
+view.imgs{
+    display: flex;
+    justify-content: center;
+}
+
+.detail p input{
+    /* display: block;
+    width: 440rpx; */
+    font-size: 16sp;
+    color: #15af7d;
+    text-overflow:ellipsis;
+}
+
+textarea{
+  width: 400rpx;
+  height: 200rpx;
+  text-align: left;
+  padding-left: 20rpx;
+  margin-left: 30rpx;
+  box-sizing: border-box;
+  color: #15af7d
+}
+
+.detail p.remark{
+  display: flex;
+  align-items: flex-start;
+  margin-top: 27rpx;
+  border: none;
+  height: 265rpx;
+  box-sizing: border-box;
+}
+
+.remark view{
+  width: 237rpx;
+}
+
+p.remark span{
+    color: #999999;
+}
+
+.btnGroup{
+    width: 343px;
+    height: 16px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 65px;
+    box-sizing: border-box;
+}
+
+.save{
+    width: 118px;
+    height: 50px;
+    border-radius: 25px;
+    background: #ffffff;
+    color: #15af7d;
+    font-size: 18sp;
+}
+
+.com{
+    width: 220px;
+    height: 50px;
+    background: #15af7d;
+    border-radius: 25px;
+    color: #fefefe;
+    font-size: 18sp;
+}
+
+.input-placeholder{
+    color: #999999;
+    text-align: left;
+}
+
+.icon{
+    width: 40rpx;
+    height: 42rpx;
+}

@@ -1,0 +1,25 @@
+<view class="container">
+  <view>
+    <view class="tip">
+      <view wx:if="{{isUpload}}">
+        <image src="../../../images/paishe.png" class="mini" bindtap="front"></image>
+        <view>拍摄驾驶证主页</view>
+      </view>
+      <view wx:else class="Idcard">
+        <image src="{{tempFilePaths1}}"></image>
+      </view>
+    </view>
+    <view class="tip">
+      <view wx:if="{{isUpload1}}">
+        <image src="../../../images/paishe.png" class="mini" bindtap="reverse"></image>
+        <view>拍摄驾驶证副页</view>
+      </view>
+      <view wx:else class="Idcard">
+        <image src="{{tempFilePaths2}}"></image>
+      </view>
+    </view>
+    <!-- <view class="bottom"> -->
+      <button class="btnBottom bottom" bindtap="commit">提交</button>
+    <!-- </view> -->
+  </view>
+</view>

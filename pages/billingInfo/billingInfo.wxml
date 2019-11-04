@@ -1,0 +1,62 @@
+<view class="container">
+    <!-- 车辆选择 -->
+    <view class="section">
+        车辆选择：
+        <input type="text"></input>
+    </view>
+    <!-- 其他信息 -->
+    <view class="detail">
+        <p>
+            <span>
+                金额
+                <i>*</i>
+            </span>
+            <input type="text" placeholder="请输入金额" placeholder-class="input-placeholder"></input>
+        </p>
+        <p>
+            <view class="time">
+                <picker mode="date" value="{{date}}" start="2000-01-01" end="2100-01-01" bindchange="bindDateChange">
+                    <span>
+                        消费时间
+                        <i>*</i>
+                    </span>
+                    {{date}}
+                </picker>
+            </view>
+        </p>
+        <p>
+            <span>
+                单据凭证
+                <i>*</i>
+            </span>
+            <view class="imgs" wx:for="{{tempFilePaths}}" wx:key="index">
+                <image src='{{item}}' bindlongpress="deleteImage" bindtap="listenerButtonPreviewImage" data-index="{{index}}" mode='widthFix' style="width: 50rpx; height: 50rpx" />
+            </view>
+           
+            <image class="icon" src="../../images/upload_baozhang.png" bindtap="upload"></image>
+        </p>
+        <p>
+            <span>
+                地址
+                <i>*</i>
+            </span>
+            <input type="text" placeholder="50字以内" maxlength="100"></input>
+        </p>
+        <p>
+            <span>
+                类别
+                <i>*</i>
+            </span>
+            <input type="text"></input>
+        </p>
+        <p class="remark">
+            <view>备注<span>（选填）</span></view>
+            <textarea></textarea>
+        </p>
+    </view>
+    <!-- 按钮 -->
+    <view class="btnGroup">
+        <button class="save" bindtap="save">保存</button>
+        <button class="com" bindtap="commit">直接上报</button>
+    </view>
+</view>

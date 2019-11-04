@@ -1,0 +1,219 @@
+.container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap
+}
+.contract{
+  width: 689rpx;
+  height: 943rpx;
+  background: #ffffff;
+  margin-top: 30rpx;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 28rpx;
+  color: #999999
+}
+radio{
+  color: #333333;
+  font-size: 28rpx;
+}
+.bottom{
+  width: 100%;
+  height: 236rpx;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow:0px 0px 6px 0px rgba(42,42,42,0.29);
+}
+button[disabled]{
+  background:rgba(21,175,125,1) !important;
+  opacity:0.5 !important;
+  color: #fefefe  !important;  
+}
+
+/* 验证码相关 */
+/* components/verifycode/verifycode.wxss */
+
+ .key-input{
+  position: fixed;
+  top: -100rpx;
+  width: 100rpx;
+  height: 20rpx;
+} 
+
+.wx-mask {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.verify-view{
+  position: fixed;
+  z-index: 5000;
+  width: 630rpx;
+  height: 496rpx;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  text-align: center;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.icon{
+   position: fixed;
+   display: block;
+   width: 30rpx;
+   height: 30rpx;
+   left: 20rpx;
+   top: 20rpx;
+}
+.verify-title{
+  position: fixed;
+  display: block;
+  width: 100%;
+  /* height: 30rpx; */
+  top: 50rpx;
+  font-size: 40rpx;
+  color: #333;
+}
+.verify-content{
+  position: fixed;
+  display: block;
+  width: 100%;
+  /* height: 30rpx; */
+  top: 140rpx;
+  font-size: 28rpx;
+  color: #666;
+}
+.verify-phone{
+  position: fixed;
+  display: block;
+  width: 100%;
+  /* height: 30rpx; */
+  top: 190rpx;
+  font-size: 28rpx;
+  color: #666;
+}
+.verify-code-view{
+  position: fixed;
+  /* width: 100%; */
+  height: 60rpx;
+  top: 260rpx;
+  left: 82rpx;
+}
+
+.verify-input-view{
+  float: left;
+  width: 49.66rpx;
+  height: 52rpx;
+  margin-left: 30rpx;
+}
+.verify-input-view-first{
+  margin-left: 0rpx;
+}
+.verify-text{
+  float: left;
+  display: block;
+  width: 49.66rpx;
+  height: 52rpx;
+  border-bottom: 2rpx #333 solid;
+  color: #15af7d;
+  text-align: center;
+  font-size: 30rpx;
+}
+
+.getcode{
+  position: fixed;
+  top: 280rpx;
+  right: 90rpx;
+  width: 150rpx;
+  font-size: 28rpx;
+  color: #15af7d
+}
+
+.commit{
+  width: 425rpx;
+  height: 80rpx;
+  position: fixed;
+  top: 360rpx;
+  left: 100rpx;
+  border: 2rpx solid #15af7d;
+  background: #ffffff;
+  border-radius: 40rpx;
+  font-size: 36rpx;
+  color: #15af7d;
+  line-height: 80rpx
+}
+/* 验证失败 */
+view.container view.mask{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap
+}
+view.container view.mask .fail{
+  width: 566rpx;
+  height: 369rpx;
+  border-radius: 20rpx;
+  background: #ffffff;
+  position: relative
+}
+view.container .mask .close{
+  width: 20rpx;
+  height: 20rpx;
+  position: absolute;
+  right: 4rpx;
+  top: 28rpx
+}
+view.container view.fail image{
+  width: 68rpx;
+  height: 68rpx;
+  margin-right: 20rpx;
+}
+view.fail>view{
+  width: 340rpx;
+  height: 260rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: absolute;
+  left: 113rpx;
+  top: 57rpx;
+}
+view.fail view view{
+  width: 100%;
+  text-align: center
+}
+view.fail view text{
+  font-size: 40rpx;
+  color: #000000
+}
+view.container view.fail button{
+  width: 313rpx;
+  height: 80rpx;
+  background: #ffffff;
+  border: 2rpx solid #15af7d;
+  border-radius: 40rpx;
+  color: #15af7d;
+  font-size: 36rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}

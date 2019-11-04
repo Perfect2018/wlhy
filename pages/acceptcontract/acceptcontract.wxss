@@ -1,0 +1,11 @@
+.container{
+  padding-top: 28rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  box-sizing: border-box
+}
+.contract{
+  width: 690rpx;
+  height: 948rpx;
+  background: #ffffff
+}

@@ -1,0 +1,34 @@
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 20rpx;
+}
+
+.bank {
+  width: 90%;
+  height: 300rpx;
+  border-radius: 20rpx;
+  background: #fff;
+  margin-bottom: 30rpx;
+  /* padding: 20rpx; */
+  box-sizing: border-box;
+  overflow: hidden
+}
+
+.bankdetail {
+  height: 500rpx;
+}
+
+.bank>view {
+  color: #666;
+  font-size: 32rpx;
+  border-bottom: 2rpx solid #e3e3e3;
+  height: 100rpx;
+  line-height: 100rpx;
+  box-sizing: border-box;
+  padding-left: 20rpx
+}
+.bank>view:last-child{
+  border: none
+}

@@ -1,0 +1,25 @@
+<wxs module="common" src="../../../utils/common.wxs"></wxs>
+<view class="container">
+  <view class="bank {{ind===index?'bankdetail':''}}" wx:for="{{bank}}" wx:key="index" bindtap="lookdetail" data-index="{{index}}">
+    <view>
+      <label>开户姓名：</label>
+      <text>{{item.user}}</text>
+    </view>
+    <view>
+      <label>开户银行：</label>
+      <text>{{item.name}}</text>
+    </view>
+    <view>
+      <label>银行卡号：</label>
+      <text>{{common.cut(item.num)}}</text>
+    </view>
+    <view>
+      <label>身份证号：</label>
+      <text>{{item.card}}</text>
+    </view>
+    <view>
+      <label>预留电话：</label>
+      <text>{{item.tel}}</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,14 @@
+<view class="container">
+    <view>
+        <input type="text"  focus="{true}" placeholder="请输入司机身份证号" placeholder-class="place" bindinput='expInput' name="num"/>
+    </view>
+      
+    <view class="tip">
+        请输入司机的身份证号，查询是否已签约承运合同
+    </view>
+    <view class=" bottom">
+        <button class="btnBottom" bindtap="next">下一步</button>
+    </view>
+      
+</view>
+  

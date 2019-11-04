@@ -1,0 +1,25 @@
+<view class="container">
+    <!-- 微信昵称 -->
+    <view class="userInfo">
+        <open-data type="userAvatarUrl" class="avatar"></open-data>
+        <open-data type="userNickName"></open-data>
+    </view>
+    <!-- 承运合同 认证信息 -->
+    <view class="otherInfo">
+        <view bindtap="lookContract" class="lookContract">
+            <view class="contract">
+                <image class="icon" src="../../images/hetong_wo.png"/>
+                承运合同
+            </view>
+            <image class="detail" src="../../images/detail.png"/>
+        </view>
+        <view bindtap="goViewInfo" class="goViewInfo">
+            <view class="contract">
+                <image class="icon" src="../../images/rzxx_wo.png"/>
+                认证信息
+            </view>
+            <image class="detail" src="../../images/detail.png"/>
+        </view> 
+    </view>
+</view>
+  

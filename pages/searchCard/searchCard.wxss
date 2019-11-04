@@ -1,0 +1,39 @@
+.container{
+    height: 100%;
+}
+.container view{
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  flex-wrap: wrap;
+}
+input{
+    width: 687rpx;
+    height: 110rpx;
+    border-radius: 20rpx;
+    margin-top: 29rpx;
+    margin-bottom: 26rpx;
+    background: #ffffff;
+    padding-left: 32rpx;
+    box-sizing: border-box
+}
+.place{
+  margin-left: 32rpx;
+  font-size: 32rpx;
+  color: #999999
+}
+.tip{
+  /* width: 687rpx; */
+  /* height: 30rpx; */
+  font-size: 28rpx;
+  color: #666666;
+}
+.container .bottom{
+  width: 100%;
+  position: fixed;
+  bottom: 38rpx;
+  
+}
+.bottom .btnBottom{
+  margin-bottom: 0
+}
