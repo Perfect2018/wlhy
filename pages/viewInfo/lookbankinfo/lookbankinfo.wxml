@@ -3,23 +3,23 @@
   <view class="bank {{ind===index?'bankdetail':''}}" wx:for="{{bank}}" wx:key="index" bindtap="lookdetail" data-index="{{index}}">
     <view>
       <label>开户姓名：</label>
-      <text>{{item.user}}</text>
-    </view>
-    <view>
-      <label>开户银行：</label>
       <text>{{item.name}}</text>
     </view>
     <view>
-      <label>银行卡号：</label>
-      <text>{{common.cut(item.num)}}</text>
+      <label>开户银行：</label>
+      <text>{{item.bankName}}</text>
     </view>
     <view>
-      <label>身份证号：</label>
-      <text>{{item.card}}</text>
+      <label>银行卡号：</label>
+      <text>{{common.cut(item.cardNumber)}}</text>
     </view>
+    <!-- <view>
+      <label>证件号码：</label>
+      <text>{{common.getcard(item.idCard)}}</text>
+    </view> -->
     <view>
       <label>预留电话：</label>
-      <text>{{item.tel}}</text>
+      <text>{{common.getphone(item.phone)}}</text>
     </view>
   </view>
 </view>

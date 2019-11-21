@@ -21,7 +21,9 @@
     "pages/logs/logs",
     "pages/waybill/waybill",
     "pages/viewInfo/lookbankinfo/lookbankinfo",
-    "pages/viewInfo/lookcarinfo/lookcarinfo"
+    "pages/viewInfo/lookcarinfo/lookcarinfo",
+    "pages/comment/comment",
+    "pages/complain/complain"
   ],
   "permission": {
     "scope.userLocation": {

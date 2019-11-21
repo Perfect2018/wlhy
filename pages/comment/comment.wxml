@@ -1,0 +1,11 @@
+<view class="container">
+  <view class="rate">
+    <view>服务评价</view>
+    
+    <van-rate color="red" allow-half v-model="value" change="onChange"></van-rate>
+  </view>
+  <view class="comment">
+    <textarea placeholder="更多评价请写在这里" class="content"></textarea>
+  </view>
+  <view class="commit" bindtap="commit">提交评价</view>
+</view>

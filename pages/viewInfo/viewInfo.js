@@ -1,4 +1,5 @@
 // pages/viewInfo/viewInfo.js\
+var utils = require('../../utils/util.js')
 var app=getApp()
 Page({
   /**
@@ -7,8 +8,21 @@ Page({
   data: {
     exist:false,
     bankNum:false,
-    type:false,
-    num:'1111222255556666888',
+    idCardIcon1:"../../images/sfz_z.png",
+    idCardIcon2:"../../images/sfz_f.png",
+    driverIcon1:"../../images/jsz_z.png",
+    driverIcon2:"../../images/sfz_f.png",
+    type:"",
+    idCard:"",
+    name:"",
+    idCardImg:"",
+    idCardBackImg:"",
+    driverImg:"",
+    driverBackImg:"",
+    phone:"",
+    carCard:'',
+    banknum:'',
+    typeDetail:""
   },
   addCarInfo(){
     wx.navigateTo({
@@ -40,14 +54,47 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that=this;
     var token=app.globalData.token
     wx.request({
-      url: 'http://192.168.1.105:9090/weChat/driver',
+      url: utils.baseUrl +'weChat/driver',
       data:{},
       header: { "Content-Type": "application/json", "token": token },
       method:'post',
       success(res){
-        console.log(res)
+        // console.log(res)
+        that.setData({
+          idCard:res.data.data.driverUser.idCard,
+          name:res.data.data.driverUser.name,
+          type: 1,
+          idCardImg: res.data.data.driver.idCardImg,
+          idCardBackImg: res.data.data.driver.idCardBackImg,
+          driverImg: res.data.data.driver.driverImg,
+          driverBackImg: res.data.data.driver.driverBackImg,
+          phone:res.data.data.driver.phone
+        })
+      }
+    })
+    wx.request({
+      url: utils.baseUrl +'weChat/truck',
+      data: {},
+      header: { "Content-Type": "application/json", "token": token },
+      method: 'post',
+      success(res){
+        that.setData({
+          carCard:res.data.data.truckNo
+        })
+      }
+    })
+    wx.request({
+      url: utils.baseUrl+'weChat/payee',
+      data: {},
+      header: { "Content-Type": "application/json", "token": token },
+      method: 'post',
+      success(res){
+        that.setData({
+          banknum:res.data.data[0].idCard
+        })
       }
     })
   },

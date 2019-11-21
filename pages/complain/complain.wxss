@@ -1,0 +1,30 @@
+/* pages/complain/complain.wxss */
+
+.container {
+  padding: 20rpx;
+}
+
+.complain {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  width: 686rpx;
+  background: #fefefe;
+  border-radius: 20rpx;
+  padding: 20rpx;
+}
+
+.btn {
+  width: 686rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-radius: 50rpx;
+  background: #15af7d;
+  color: #fefefe;
+  font-size: 36rpx;
+  text-align: center;
+  margin-top: 30rpx;
+}

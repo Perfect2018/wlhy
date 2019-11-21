@@ -1,45 +1,22 @@
-// pages/home/home.js
-var app=getApp()
+// pages/complain/complain.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    has:true,
-    name:"",
-    avatar:"",
+
   },
- 
-  lookContract(){
-    wx:wx.navigateTo({
-      url: '../searchCard/searchCard',
-    })
-  },
-  goViewInfo(){
-    if(this.data.has){
-      wx.navigateTo({
-        url: '../viewInfo/viewInfo',
-      })
-    }else{
-      wx.navigateTo({
-        url: '../certification/certification',
-      })
-    }
-  },
-  complain(){
-    wx.navigateTo({
-      url: '../complain/complain',
+  commit(){
+    wx.showToast({
+      title: '提交成功',
     })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      name: app.globalData.userInfo.name,
-      avatar: app.globalData.userInfo.avatar
-    })
+
   },
 
   /**

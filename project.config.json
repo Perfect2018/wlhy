@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": false,
+		"urlCheck": true,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -178,6 +178,20 @@
 					"id": -1,
 					"name": "pages/viewInfo/lookcarinfo/lookcarinfo",
 					"pathName": "pages/viewInfo/lookcarinfo/lookcarinfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/comment/comment",
+					"pathName": "pages/comment/comment",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/complain/complain",
+					"pathName": "pages/complain/complain",
 					"scene": null
 				}
 			]

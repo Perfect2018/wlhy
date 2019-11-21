@@ -1,3 +1,4 @@
+<wxs module="common" src="../../utils/common.wxs"></wxs>
 <view class="container">
   <!-- 顶部导航选项 -->
   <view class="navbar">
@@ -10,53 +11,58 @@
   <swiper class="content" current="{{currentData}}" bindchange="bindchange">
     <!-- 全部订单 -->
     <swiper-item class="allorder">
+      <view wx:if="{{list.length==0}}" class="nodata">暂未查询到相关数据</view>
       <view class="order" wx:for="{{list}}" wx:key="{{index}}">
         <!-- 时间距离 -->
-        <view>
+        <!-- <view>
           <view class="time">
             <image src="../../images/time.png"></image>
             <view>装货时间:
-              <label>{{item.time}}</label>
+              <label>{{item.createTime}}</label>
             </view>
           </view>
           <view>距您{{item.distance}}km</view>
-        </view>
-        <view class="border"></view>
+        </view> -->
+        <!-- <view class="border"></view> -->
         <!-- 地址信息 -->
         <view class="addr">
           <view class="top">
             <view class="start">
               <image src="../../images/start.png" class="start_icon"></image>
-              <label>{{item.start}}</label>
+              <view>{{item.loadAddress}}</view>
             </view>
             <view class="direct">
               <image src="../../images/direct.png"></image>
             </view>
             <view class="end">
               <image src="../../images/end.png" class="end_icon"></image>
-              <label>{{item.end}}</label>
+              <view>{{item.unloadAddress}}</view>
             </view>
-          </view>
-          <view class="bottom">
-            <view class="freight">
-              运费
-              <label>￥{{item.freight}}</label>
-            </view>
-            <view class="btn" bindtap="getorder">接单</view>
           </view>
         </view>
+        <view class="bottom">
+            <view class="freight">
+              运费
+              <label>￥{{item.freightFee}}</label>
+            </view>
+            <view class="groupbutton">
+              <view class="cancel" bindtap="cancel" data-id="{{item.id}}">拒单</view>
+              <view class="btn" bindtap="getorder" data-id="{{item.id}}">接单</view>
+            </view>
+          </view>
       </view>
     </swiper-item>
     <!-- 装货中 -->
     <swiper-item>
-      <view class="loading">
+      <view wx:if="{{loading==''}}" class="nodata">暂未查询到相关数据</view>
+      <view class="loading" wx:else>
         <!-- 订单编号 -->
         <view class="order_number">
           <!-- 单号 -->
           <view class="num">
             <image src="../../images/order_num.png"></image>
             <label>订单编号:</label>
-            <text>46551274412157</text>
+            <text>{{loading.customNo}}</text>
           </view>
           <!-- 确认订单 -->
           <view class="loading_order">
@@ -65,11 +71,11 @@
                 <image src="../../images/start.png" class="start_icon"></image>
                 <view class="loading_addr_detail">
                   <view>
-                    <text>广东深圳</text>
+                    <text>{{loading.loadProvince+loading.loadCity}}</text>
                   </view>
-                  <text>南山区科技园南区R2-B三楼步步高</text>
+                  <text>{{loading.loadAddress}}</text>
                 </view>
-                <view class="tel"  bindtap="ringup">
+                <view class="tel" bindtap="loadringupsend">
                   <image src="../../images/tel.png"></image>
                 </view>
               </view>
@@ -77,11 +83,11 @@
                 <image src="../../images/end.png" class="end_icon"></image>
                 <view class="loading_addr_detail">
                   <view>
-                    <text>湖北武汉</text>
+                    <text>{{loading.unloadProvince+loading.unloadCity}}</text>
                   </view>
-                  <text>武昌区水果湖街徐东路50号</text>
+                  <text>{{loading.unloadAddress}}</text>
                 </view>
-                <view class="tel" bindtap="ringup">
+                <view class="tel" bindtap="loadringupget">
                   <image src="../../images/tel.png"></image>
                 </view>
               </view>
@@ -91,41 +97,42 @@
           <view class="loading_bottom">
             <view class="freight">
               运费:
-              <label>￥540</label>
+              <label>￥{{loading.freightFee}}</label>
             </view>
-            <view class="cancel" bindtap="cancel">取消订单</view>
+            <!-- <view class="cancel" bindtap="cancel">取消订单</view> -->
             <view class="confirm" bindtap="confirm">确认装货</view>
           </view>
         </view>
         <!-- 地图 -->
         <view class="map">
-          <map show-location="true" id="myMap" bindtap="moveToLocation" latitude="{{latitude}}" longitude="{{longitude}}"></map>
+          <map show-location="true" id="myMap" bindtap="moveToLocation" markers="{{markers}}"></map>
         </view>
       </view>
     </swiper-item>
     <!-- 配送中 -->
     <swiper-item>
-      <view class="delivery">
+      <view wx:if="{{delivery==''}}" class="nodata">暂未查询到相关数据</view>
+      <view class="delivery" wx:else>
         <!-- 订单编号 -->
         <view class="order_number">
           <!-- 单号 -->
           <view class="num">
             <image src="../../images/order_num.png"></image>
             <label>订单编号:</label>
-            <text>46551274412157</text>
+            <text>{{delivery.customNo}}</text>
           </view>
-          <!-- 确认订单 -->
+          <!-- 订单相关信息 -->
           <view class="loading_order">
             <view class="loading_addr">
               <view class="loading_start">
                 <image src="../../images/start.png" class="start_icon"></image>
                 <view class="loading_addr_detail">
                   <view>
-                    <text>广东深圳</text>
+                    <text>{{delivery.loadProvince+delivery.loadCity}}</text>
                   </view>
-                  <text>南山区科技园南区R2-B三楼步步高</text>
+                  <text>{{delivery.loadAddress}}</text>
                 </view>
-                <view class="tel" bindtap="ringup">
+                <view class="tel" bindtap="delringupsend">
                   <image src="../../images/tel.png"></image>
                 </view>
               </view>
@@ -133,11 +140,11 @@
                 <image src="../../images/end.png" class="end_icon"></image>
                 <view class="loading_addr_detail">
                   <view>
-                    <text>湖北武汉</text>
+                    <text>{{delivery.unloadProvince+delivery.unloadCity}}</text>
                   </view>
-                  <text>武昌区水果湖街徐东路50号</text>
+                  <text>{{delivery.unloadAddress}}</text>
                 </view>
-                <view class="tel" bindtap="ringup">
+                <view class="tel" bindtap="delringupget">
                   <image src="../../images/tel.png"></image>
                 </view>
               </view>
@@ -147,29 +154,34 @@
           <view class="delivery_bottom">
             <view class="freight">
               运费:
-              <label>￥540</label>
+              <label>￥{{delivery.freightFee}}</label>
             </view>
             <view class="confirm" bindtap="receipt">确认收货</view>
           </view>
         </view>
         <!-- 地图 -->
         <view class="map">
-          <map show-location="true" id="myMap1" bindtap="moveToLocation1" latitude="{{latitude1}}" longitude="{{longitude1}}" show-compass="true" polyline="{{polyline}}" markers="{{markers}}"></map>
+          <map show-location="true" id="myMap1" bindtap="moveToLocation1" show-compass="true" polyline="{{polyline}}" markers="{{markers1}}"></map>
         </view>
       </view>
     </swiper-item>
     <!-- 已完成 -->
     <swiper-item>
-      <scroll-view scroll-y="true" style="height:100%">
-        <view class="history" wx:for="{{historylist}}" wx:key="index">
+      <view wx:if="{{history.length==0}}" class="nodata">暂未查询到相关数据</view>
+      <scroll-view scroll-y="true" style="height:100%" wx:else>
+        <view class="history" wx:for="{{history}}" wx:key="index">
           <view class="order_number">
             <!-- 单号 -->
             <view class="status {{item.status==1?'done':'abolish'}}">{{item.status==1?"已完成":"已取消"}}</view>
-            <view class="num">
+            <view class="num numhistory">
+            <view>
               <image src="../../images/order_num.png"></image>
               <label>订单编号:</label>
-              <text>{{item.num}}</text>
+              <text>{{item.customNo}}</text>
+              </view>
+              <view class="comment" bindtap="comment">评价</view>
             </view>
+            
             <!-- 确认订单 -->
             <view class="loading_order">
               <view class="loading_addr">
@@ -177,37 +189,47 @@
                   <image src="../../images/start.png" class="start_icon"></image>
                   <view class="loading_addr_detail">
                     <view>
-                      <text>{{item.start_title}}</text>
+                      <text>{{item.loadProvince+item.loadCity}}</text>
                     </view>
-                    <text>{{item.start_detail}}</text>
+                    <text>{{item.loadAddress}}</text>
                   </view>
-                  <view class="tel" bindtap="ringup">
+                  <!-- <view class="tel" bindtap="hisringupsend">
                     <image src="../../images/tel.png"></image>
-                  </view>
+                  </view> -->
                 </view>
                 <view class="loading_end">
                   <image src="../../images/end.png" class="end_icon"></image>
                   <view class="loading_addr_detail">
                     <view>
-                      <text>{{item.end_title}}</text>
+                      <text>{{item.unloadProvince+item.unloadCity}}</text>
                     </view>
-                    <text>{{item.end_detail}}</text>
+                    <text>{{item.unloadAddress}}</text>
                   </view>
-                  <view class="tel" bindtap="ringup">
+                  <!-- <view class="tel" bindtap="hisringupget">
                     <image src="../../images/tel.png"></image>
-                  </view>
+                  </view> -->
                 </view>
               </view>
             </view>
             <view class="history_bottom">
               <view class="freight">
                 运费:
-                <label>￥{{item.freight}}</label>
+                <label>￥{{item.freightFee}}</label>
               </view>
-              <view class="freight_img" wx:for="{{tempFilePaths}}" wx:key="index" wx:if="e.currentTarget.dataset.index1==index">
-                <image src="{{item}}" bindlongpress="deleteImage" bindtap="listenerButtonPreviewImage" data-index="{{index}}" mode='widthFix' style="width: 50rpx; height: 50rpx"></image>
+
+              <!-- <view wx:if="{{item.imgPath==''}}">
+                <view wx:if="{{currentwaybillId==item.id}}">
+                  <view class="freight_img" wx:for="{{tempFilePaths}}" wx:key="index1">
+                    <image src="{{item}}" bindlongpress="deleteImage" bindtap="listenerButtonPreviewImage" data-index="{{index}}" mode='widthFix' style="width: 50rpx; height: 50rpx"></image>
+                  </view>
+                </view>
+              </view> -->
+              <view>
+                <view class="freight_img">
+                  <image src="{{item.imgPath}}" bindlongpress="deleteImage" bindtap="listenerButtonPreviewImage" data-index="{{index}}" data-imgpath="{{item.imgPath}}" mode='widthFix' style="width: 50rpx; height: 50rpx"></image>
+                </view>
               </view>
-              <view class="confirm" bindtap="uploading" data-index="{{index1}}">上传运单</view>
+              <view class="confirm" bindtap="uploading" data-waybillId="{{item.id}}">上传运单</view>
             </view>
           </view>
         </view>

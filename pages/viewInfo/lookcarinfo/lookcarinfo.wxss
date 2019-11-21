@@ -9,7 +9,7 @@
   padding-left: 34rpx;
   padding-right: 34rpx;
   width: 687rpx;
-  height: 992rpx;
+  /* height: 992rpx; */
   background: #ffffff;
   display: flex;
   flex-wrap: wrap;

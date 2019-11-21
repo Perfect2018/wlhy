@@ -1,45 +1,26 @@
-// pages/home/home.js
-var app=getApp()
+// pages/comment/comment.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    has:true,
-    name:"",
-    avatar:"",
+    value:4.5
   },
- 
-  lookContract(){
-    wx:wx.navigateTo({
-      url: '../searchCard/searchCard',
-    })
+  
+  onChange(e){
+    console.log(11)
   },
-  goViewInfo(){
-    if(this.data.has){
-      wx.navigateTo({
-        url: '../viewInfo/viewInfo',
-      })
-    }else{
-      wx.navigateTo({
-        url: '../certification/certification',
-      })
-    }
-  },
-  complain(){
-    wx.navigateTo({
-      url: '../complain/complain',
+  commit(){
+    wx.showToast({
+      title: '评价成功',
     })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      name: app.globalData.userInfo.name,
-      avatar: app.globalData.userInfo.avatar
-    })
+
   },
 
   /**

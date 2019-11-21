@@ -1,6 +1,7 @@
-.container{
+.container {
   padding-top: 100rpx;
 }
+
 .navbar {
   width: 100%;
   height: 100rpx;
@@ -28,6 +29,11 @@
   height: 100%;
 }
 
+.nodata {
+  color: #15af7d;
+  text-align: center;
+}
+
 /* 全部订单 */
 
 .order {
@@ -41,7 +47,10 @@
   margin-bottom: 22rpx;
   margin-left: 31rpx;
   margin-right: 32rpx;
-
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center
 }
 
 .order>view:first-child {
@@ -54,7 +63,7 @@
 }
 
 .time {
-  width: 330rpx;
+  width: 386rpx;
   height: 100%;
   display: flex;
   justify-content: space-between;
@@ -90,14 +99,24 @@
 
 .start, .end {
   width: 220rpx;
-  height: 50rpx;
+  height: 100rpx;
   line-height: 50rpx;
-  font-size: 34rpx;
+  font-size: 28rpx;
   color: #333;
   font-weight: bold;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.start>view, .end>view {
+  width: 160rpx;
+  height: 100%;
+  font-size: 28rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-clamp: 2;
+  word-break: break-all;
 }
 
 .start_icon, .end_icon {
@@ -121,6 +140,7 @@
 .bottom {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 
 .freight {
@@ -132,6 +152,12 @@
   color: #ff4b60;
   font-size: 40rpx;
   font-weight: bold;
+}
+
+.groupbutton {
+  width: 400rpx;
+  display: flex;
+  justify-content: space-around;
 }
 
 .btn {
@@ -157,9 +183,9 @@
   background: rgba(255, 255, 255, 1);
   box-shadow: 0px 2rpx 2rpx 0rpx rgba(117, 117, 117, 0.09);
   border-radius: 20rpx;
-   margin-left: 31rpx;
+  margin-left: 31rpx;
   margin-right: 32rpx;
-  position: relative
+  position: relative;
 }
 
 .num {
@@ -168,7 +194,17 @@
   border-bottom: 2rpx solid #e3e3e3;
   line-height: 92rpx;
   padding-left: 30rpx;
+  padding-right: 30rpx;
   box-sizing: border-box;
+  display: flex;
+  align-items: center
+}
+.numhistory{
+display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.num>view:first-child {
   display: flex;
   align-items: center;
 }
@@ -177,16 +213,28 @@
   margin-left: 14rpx;
   font-size: 28rpx;
 }
-
+.num>view>label, .num>view>text {
+  margin-left: 14rpx;
+  font-size: 28rpx;
+}
 .num>label {
   color: #666;
 }
-
+.num>view>label {
+  color: #666;
+}
 .num>text {
   color: #333;
 }
-
+.num>view>text {
+  color: #333;
+}
 .num>image {
+  width: 30rpx;
+  height: 34rpx;
+}
+
+.num>view>image {
   width: 30rpx;
   height: 34rpx;
 }
@@ -239,21 +287,32 @@
   margin-bottom: 30rpx;
   box-sizing: border-box;
 }
-.loading_bottom{
+
+.loading_bottom {
   display: flex;
-  justify-content: space-around
+  justify-content: space-between;
+  padding: 0 30rpx;
+  box-sizing: border-box;
 }
-.cancel{
+
+.cancel {
+  width: 152rpx;
+  height: 60rpx;
   background: #fff;
   color: #ff4b60;
-  border: 2rpx solid #ff4b60
+  border: 2rpx solid #ff4b60;
+  border-radius: 30rpx;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 60rpx;
 }
-.confirm{
+
+.confirm {
   background: #15af7d;
   color: #fff;
- 
 }
-.cancel,.confirm{
+
+.confirm {
   width: 178rpx;
   height: 60rpx;
   border-radius: 30rpx;
@@ -261,31 +320,37 @@
   text-align: center;
   line-height: 60rpx;
 }
-.map{
+
+.map {
   width: 100%;
-  height: 61%
+  height: 61%;
 }
-.map>map{
+
+.map>map {
   width: 100%;
-  height: 100%
+  height: 100%;
 }
-.delivery{
+
+.delivery {
   width: 100%;
-  height: 100%
+  height: 100%;
 }
-.delivery_bottom,.history_bottom{
+
+.delivery_bottom, .history_bottom {
   width: 100%;
   display: flex;
   justify-content: space-between;
   padding-left: 34rpx;
   padding-right: 34rpx;
-  box-sizing: border-box
+  box-sizing: border-box;
 }
-.history{
+
+.history {
   margin-bottom: 20rpx;
   box-sizing: border-box;
 }
-.status{
+
+.status {
   width: 170rpx;
   height: 50rpx;
   font-size: 30rpx;
@@ -295,15 +360,28 @@
   line-height: 50rpx;
   border-style: solid;
   position: absolute;
-  right: 30rpx;
-  top: 55rpx;
-  transform: rotate(-15deg)
+  left: 30rpx;
+  top: 70rpx;
+  transform: rotate(-15deg);
 }
-.abolish{
+
+.abolish {
   border-color: #999;
-  color: #999
+  color: #999;
 }
-.done{
+
+.done {
   border-color: #15af7d;
-  color: #15af7d
+  color: #15af7d;
+}
+
+.num>view.comment {
+  width: 178rpx;
+  height: 60rpx;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 60rpx;
+  background: #15af7d;
+  color: #fff;
+  border-radius: 30rpx;
 }

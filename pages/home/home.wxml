@@ -1,8 +1,10 @@
 <view class="container">
     <!-- 微信昵称 -->
     <view class="userInfo">
-        <open-data type="userAvatarUrl" class="avatar"></open-data>
-        <open-data type="userNickName"></open-data>
+        <!-- <open-data type="userAvatarUrl" class="avatar"></open-data>
+        <open-data type="userNickName"></open-data> -->
+        <view class="avatar">{{avatar}}</view>
+        <view>{{name}}</view>
     </view>
     <!-- 承运合同 认证信息 -->
     <view class="otherInfo">
@@ -20,6 +22,10 @@
             </view>
             <image class="detail" src="../../images/detail.png"/>
         </view> 
+    </view>
+    <view class="complain" bindtap="complain">
+      <view>咨询投诉</view>
+      <image class="detail" src="../../images/detail.png"/>
     </view>
 </view>
   

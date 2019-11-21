@@ -1,4 +1,5 @@
 // pages/login/login.js
+var utils = require('../../utils/util.js')
 var app=getApp()
 Page({
 
@@ -26,7 +27,7 @@ Page({
         title: '登录中',
       })
       wx.request({
-        url: 'http://192.168.1.105:9090/weChat/login',
+        url: utils.baseUrl +'weChat/login',
         data: {
           loginName: user,
           password: pwd
@@ -41,7 +42,7 @@ Page({
               icon: 'none'
             })
             getApp().globalData.token=res.data.data.token
-            console.log(app.globalData.token)
+            getApp().globalData.userInfo=res.data.data.user
             wx.reLaunch({
               url: '../waybillcenter/center',
             })

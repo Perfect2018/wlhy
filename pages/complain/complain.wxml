@@ -1,0 +1,6 @@
+<view class="container">
+  <view class="complain">
+    <textarea placeholder="请输入您想要咨询投诉的内容" class="content"></textarea>
+  </view>
+  <view class="btn" bindtap="commit">提交</view>
+</view>

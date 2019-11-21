@@ -8,6 +8,22 @@ var self = {
   getphone: function (str) {
     return str.substring(0, 3) + "**** ****" + str.substring(7);
     // return number;
+  },
+  // 身份证
+  getcard:function(str){
+    return str.substring(0, 3) + "**** ****" + str.substring(16);
+  },
+  // 数组去重
+  unique:function(arr){
+    for(var i=0;i<arr.length;i++){
+      for(var j=i+1;j<arr.length;i++){
+        if(arr[i].id==arr[j].id){
+          arr.splice(j, 1);
+          j--;
+        }
+      }
+    }
+    return arr
   }
 }
 
@@ -16,4 +32,6 @@ var self = {
 module.exports ={
   cut:self.cut,
   getphone:self.getphone,
+  getcard:self.getcard,
+  unique:self.unique
 }

@@ -13,7 +13,10 @@ const formatNumber = n => {
   n = n.toString()
   return n[1] ? n : '0' + n
 }
-
+// 网络请求方法
+var baseUrl ="https://www.wangluohuoyun.com.cn/"
+// var baseUrl ="http://192.168.1.103:443/"
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  baseUrl:baseUrl
 }
